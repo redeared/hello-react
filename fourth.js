@@ -1,6 +1,6 @@
 
 const greetingFunction = (prop) => {
-    const P_S_ = 'From fourth - functional components';
+    const P_S_ = 'From fourth - functional component';
     if (prop && prop.visitor) {
         return <h1> Hello {prop.visitor}. {P_S_}</h1>;
     }
