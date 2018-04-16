@@ -1,12 +1,6 @@
 
-const greetingFunction = (prop) => {
-    const P_S_ = 'From fourth - functional component';
-    if (prop && prop.visitor) {
-        return <h1> Hello {prop.visitor}. {P_S_}</h1>;
-    }
-    return <h1> Hello. {P_S_} </h1>;
+const FourthGreeting = ({ visitor: visitor = 'World!', ...props }) => {
+    return <h1> Hello{visitor ? " " + visitor: ''}. From fourth - functional component </h1>;
 }
 
-const FourthGreeting = greetingFunction;
-
-ReactDOM.render(<FourthGreeting visitor="World"/>, document.getElementById('fourth'));
+ReactDOM.render(<FourthGreeting visitor="World" />, document.getElementById('fourth'));
